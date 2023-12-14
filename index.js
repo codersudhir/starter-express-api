@@ -27,9 +27,10 @@ const sequelize = new Sequelize(
 // Routes
 const taskRoutes = require('./routes/tasksRoutes');
 const listRoutes = require('./routes/listRoutes');
-
+const userRoutes = require('./routes/auth');
 app.use('/api/tasks', taskRoutes);
 app.use('/api/lists', listRoutes);
+app.use('/api/users', userRoutes);
 
 // Serve React app in production
 if (process.env.NODE_ENV === 'production') {
